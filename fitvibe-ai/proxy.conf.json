@@ -1,0 +1,10 @@
+{
+  "/api-pixazo": {
+    "target": "https://gateway.pixazo.ai",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api-pixazo": ""
+    }
+  }
+}
