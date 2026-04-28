@@ -13,7 +13,6 @@ export class ImageUploaderComponent {
 
   previewUrl: string | null = null;
 
-  // הזרקה של ה-ChangeDetector
   constructor(private cdr: ChangeDetectorRef) {}
 
   onFileChange(event: any) {
@@ -23,10 +22,8 @@ export class ImageUploaderComponent {
       
       const reader = new FileReader();
       reader.onload = () => {
-        // עדכון המשתנה
         this.previewUrl = reader.result as string;
         
-        // כאן הקסם קורה: אנחנו מכריחים את אנגולר לרענן את התצוגה
         this.cdr.detectChanges();
       };
       reader.readAsDataURL(file);
@@ -35,6 +32,6 @@ export class ImageUploaderComponent {
 
   removeImage() {
     this.previewUrl = null;
-    this.cdr.detectChanges(); // גם כאן כדאי להוסיף כדי שה-X יעבוד מיד
+    this.cdr.detectChanges();
   }
 }

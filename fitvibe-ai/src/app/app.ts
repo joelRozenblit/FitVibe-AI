@@ -3,7 +3,7 @@ import { HomeComponent } from "./components/home/home";
 
 @Component({
   selector: 'app-root',
-  imports: [HomeComponent],
+  imports: [ HomeComponent ],
   template: `<app-home></app-home>`,
   styleUrl: './app.css'
 })
